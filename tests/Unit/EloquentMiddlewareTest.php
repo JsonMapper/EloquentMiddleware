@@ -42,7 +42,7 @@ class EloquentMiddlewareTest extends TestCase
         $middleware = new EloquentMiddleware(new NullCache());
         $propertyMap = new PropertyMap();
         $mapper = $this->createMock(JsonMapperInterface::class);
-        $model = $this->prepareMockedModel(new Column('id', Type::getType(Types::INTEGER)));
+        $model = $this->prepareMockedModel(new Column('id', Type::getType(Type::INTEGER)));
 
         $middleware->handle(new \stdClass(), new ObjectWrapper($model), $propertyMap, $mapper);
 

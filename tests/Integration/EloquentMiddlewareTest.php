@@ -17,7 +17,7 @@ class EloquentMiddlewareTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-$x = __DIR__ . '/../database/migrations';
+
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
