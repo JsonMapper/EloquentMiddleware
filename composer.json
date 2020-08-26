@@ -1,0 +1,44 @@
+{
+    "name": "json-mapper/eloquent-middleware",
+    "description": "The Eloquent middleware for JsonMapper",
+    "keywords": [
+        "json",
+        "mapper",
+        "JsonMapper",
+        "middleware",
+        "laravel",
+        "eloquent"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "JsonMapper\\EloquentMiddleware\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JsonMapper\\EloquentMiddleware\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "json-mapper/laravel-package": "^1.1",
+        "php": "^7.2 || ^8.0",
+        "doctrine/dbal": "^2.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phpstan/phpstan": "^0.12.19",
+        "php-coveralls/php-coveralls": "^2.2",
+        "phpunit/phpunit": "^8.0",
+        "orchestra/testbench": "^5.3"
+    },
+    "scripts": {
+        "phpcs": "phpcs --standard=PSR12 src tests --ignore=tests/database",
+        "phpcbf": "phpcbf --standard=PSR12 src tests --ignore=tests/database",
+        "phpstan": "phpstan analyse",
+        "unit-tests": "phpunit --testsuite unit --testdox --coverage-clover=build/logs/clover-unit-tests.xml",
+        "integration-tests": "phpunit --testsuite integration --testdox --coverage-clover=build/logs/clover-unit-tests.xml"
+    }
+}
