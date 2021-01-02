@@ -19,14 +19,15 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "JsonMapper\\EloquentMiddleware\\Tests\\": "tests/"
+            "JsonMapper\\EloquentMiddleware\\Tests\\": "tests/",
+            "JsonMapper\\Tests\\": "vendor/json-mapper/json-mapper/tests/"
         }
     },
     "require": {
-        "json-mapper/laravel-package": "^1.1",
+        "json-mapper/laravel-package": "2.x-dev",
         "php": "^7.2 || ^8.0",
         "doctrine/dbal": "^2.3",
-        "json-mapper/json-mapper": "^1.1"
+        "json-mapper/json-mapper": "2.x-dev"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5",
