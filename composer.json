@@ -24,10 +24,10 @@
         }
     },
     "require": {
-        "json-mapper/laravel-package": "2.x-dev",
+        "json-mapper/laravel-package": "^2.0",
         "php": "^7.2 || ^8.0",
         "doctrine/dbal": "^2.3",
-        "json-mapper/json-mapper": "2.x-dev"
+        "json-mapper/json-mapper": "^2.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5",
