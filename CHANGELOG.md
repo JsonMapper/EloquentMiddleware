@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0]
+## Changed
+- Update to version ^2.0 JsonMapper and LaravelPackage
+### Added
+ - Add PHP8 support to the build matrix. [PR#4](https://github.com/JsonMapper/EloquentMiddleware/pull/4)
+
 ## [1.0.0] - 2020-09-03
 ### Added
 - Allow Eloquent models to be populated from Json.
