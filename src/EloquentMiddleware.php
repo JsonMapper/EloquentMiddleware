@@ -10,6 +10,7 @@ use JsonMapper\Builders\PropertyBuilder;
 use JsonMapper\Enums\Visibility;
 use JsonMapper\JsonMapperInterface;
 use JsonMapper\Middleware\AbstractMiddleware;
+use JsonMapper\ValueObjects\ArrayInformation;
 use JsonMapper\ValueObjects\PropertyMap;
 use JsonMapper\ValueObjects\PropertyType;
 use JsonMapper\Wrapper\ObjectWrapper;
@@ -132,7 +133,7 @@ class EloquentMiddleware extends AbstractMiddleware
 
             $property = PropertyBuilder::new()
                 ->setName($name)
-                ->addType($type, false)
+                ->addType($type, ArrayInformation::notAnArray())
                 ->setIsNullable(!$column->getNotnull())
                 ->setVisibility(Visibility::PUBLIC())
                 ->build();
@@ -188,7 +189,7 @@ class EloquentMiddleware extends AbstractMiddleware
             $realType = $this->checkForCustomLaravelCasts($realType);
 
             $builder = $propertyMap->getProperty($name)->asBuilder();
-            $property = $builder->setTypes(new PropertyType($realType, false))->build();
+            $property = $builder->setTypes(new PropertyType($realType, ArrayInformation::notAnArray()))->build();
             $propertyMap->addProperty($property);
         }
     }

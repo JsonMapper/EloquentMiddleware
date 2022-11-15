@@ -15,6 +15,7 @@ use JsonMapper\EloquentMiddleware\EloquentMiddleware;
 use JsonMapper\Enums\Visibility;
 use JsonMapper\JsonMapperInterface;
 use JsonMapper\Tests\Helpers\AssertThatPropertyTrait;
+use JsonMapper\ValueObjects\ArrayInformation;
 use JsonMapper\ValueObjects\PropertyMap;
 use JsonMapper\Wrapper\ObjectWrapper;
 use Orchestra\Testbench\TestCase;
@@ -52,7 +53,7 @@ class EloquentMiddlewareTest extends TestCase
         self::assertTrue($propertyMap->hasProperty('id'));
         $this->assertThatProperty($propertyMap->getProperty('id'))
             ->hasName('id')
-            ->onlyHasType('integer', false)
+            ->onlyHasType('integer', ArrayInformation::notAnArray())
             ->hasVisibility(Visibility::PUBLIC())
             ->isNotNullable();
     }
