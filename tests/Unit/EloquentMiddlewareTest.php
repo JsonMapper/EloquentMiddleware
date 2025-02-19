@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JsonMapper\EloquentMiddleware\Tests\Integration;
+namespace JsonMapper\EloquentMiddleware\Tests\Unit;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
