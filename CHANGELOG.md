@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.0.0]
+## [2.1.0] - 2025-02-19
+## Changed
+- Migrate from Travis CI to GitHub CI [PR#8](https://github.com/JsonMapper/EloquentMiddleware/pull/8)
+
+## [2.0.0] - 2021-01-07
 ## Changed
 - Update to version ^2.0 JsonMapper and LaravelPackage
 ### Added
