@@ -33,7 +33,7 @@
         "squizlabs/php_codesniffer": "^3.5",
         "phpstan/phpstan": "^0.12.19",
         "php-coveralls/php-coveralls": "^2.2",
-        "orchestra/testbench": "^5.3",
+        "orchestra/testbench": "^5.20",
         "phpunit/phpunit": "^8.5 || ^9.0"
     },
     "scripts": {
